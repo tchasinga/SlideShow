@@ -10,27 +10,27 @@ function SlideShow() {
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/assets/IphoneTwo.jpg',
+      imageUrl: '/src/public/assets/IphoneTwo.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/assets/IphoneThree.jpg',
+      imageUrl: '/src/public/assets/IphoneThree.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/assets/IphoneFour.jpg',
+      imageUrl: '/src/public/assets/IphoneFour.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/assets/IphoneFive.jpg',
+      imageUrl: '/src/public/assets/IphoneFive.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/assets/iphonSix.jpg',
+      imageUrl: '/src/public/assets/iphonSix.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
