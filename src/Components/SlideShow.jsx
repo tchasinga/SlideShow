@@ -5,32 +5,32 @@ function SlideShow() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const items = [
     {
-      imageUrl: 'assets/iphoneOne.jpg',
+      imageUrl: '/assets/iphoneOne.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/src/public/assets/IphoneTwo.jpg',
+      imageUrl: '/assets/IphoneTwo.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/src/public/assets/IphoneThree.jpg',
+      imageUrl: '/assets/IphoneThree.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/src/public/assets/IphoneFour.jpg',
+      imageUrl: '/assets/IphoneFour.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/src/public/assets/IphoneFive.jpg',
+      imageUrl: '/assets/IphoneFive.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
     {
-      imageUrl: '/src/public/assets/iphonSix.jpg',
+      imageUrl: '/assets/iphonSix.jpg',
       name: 'LUNDEV',
       description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
     },
