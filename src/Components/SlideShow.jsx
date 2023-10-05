@@ -1,79 +1,110 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './SlideChow.css';
+import iphoneOne from '/src/assets/iphoneOne.jpg';
+import IphoneTwo from '/src/assets/IphoneTwo.jpg';
+import IphoneThree from '/src/assets/IphoneThree.jpg';
+import IphoneFour from '/src/assets/IphoneFour.jpg';
+import IphoneFive from '/src/assets/IphoneFive.jpg';
+import iphonSix from '/src/assets/iphonSix.jpg';
 
-function SlideShow() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const items = [
-    {
-      imageUrl: '/assets/iphoneOne.jpg',
-      name: 'LUNDEV',
-      description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
-    },
-    {
-      imageUrl: '/assets/IphoneTwo.jpg',
-      name: 'LUNDEV',
-      description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
-    },
-    {
-      imageUrl: '/assets/IphoneThree.jpg',
-      name: 'LUNDEV',
-      description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
-    },
-    {
-      imageUrl: '/assets/IphoneFour.jpg',
-      name: 'LUNDEV',
-      description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
-    },
-    {
-      imageUrl: '/assets/IphoneFive.jpg',
-      name: 'LUNDEV',
-      description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
-    },
-    {
-      imageUrl: '/assets/iphonSix.jpg',
-      name: 'LUNDEV',
-      description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
-    },
-  ];
-  const handleNextClick = () => {
-    console.log('Current Index Before Next Click:', currentIndex);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
-    console.log('Current Index After Next Click:', currentIndex);
-  };
-  
-  const handlePrevClick = () => {
-    console.log('Current Index Before Prev Click:', currentIndex);
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
-    console.log('Current Index After Prev Click:', currentIndex);
+class SlideChow extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [
+        {
+          id: 1,
+          image: iphoneOne,
+          name: 'LUNDEV',
+          description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
+        },
+        {
+          id: 2,
+          image: IphoneTwo,
+          name: 'LUNDEV',
+          description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
+        },
+        {
+          id: 3,
+          image: IphoneThree,
+          name: 'LUNDEV',
+          description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
+        },
+        {
+          id: 4,
+          image: IphoneFour,
+          name: 'LUNDEV',
+          description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
+        },
+        {
+          id: 5,
+          image: IphoneFive,
+          name: 'LUNDEV',
+          description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
+        },
+        {
+          id: 6,
+          image: iphonSix,
+          name: 'LUNDEV',
+          description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
+        },
+      ],
+      currentIndex: 0,
+    };
+  }
+
+  handleNext = () => {
+    const { items, currentIndex } = this.state;
+    const newItems = [...items];
+    const firstItem = newItems.shift();
+    newItems.push(firstItem);
+    this.setState({
+      items: newItems,
+      currentIndex: currentIndex === items.length - 1 ? 0 : currentIndex + 1,
+    });
   };
 
-  return (
-    <div className="container">
-      <div id="slide">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className={`item ${index === currentIndex ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${item.imageUrl})` }}
-          >
-            <div className="content">
-              <div className="name">{item.name}</div>
-              <div className="des">{item.description}</div>
-              <button>See more</button>
+  handlePrev = () => {
+    const { items, currentIndex } = this.state;
+    const newItems = [...items];
+    const lastItem = newItems.pop();
+    newItems.unshift(lastItem);
+    this.setState({
+      items: newItems,
+      currentIndex: currentIndex === 0 ? items.length - 1 : currentIndex - 1,
+    });
+  };
+
+  render() {
+    const { items, currentIndex } = this.state;
+    return (
+      <div className="container">
+        <div id="slide">
+          {items.map((item, index) => (
+            <div
+              key={item.id}
+              className={`item ${index === currentIndex ? 'active' : ''}`}
+              style={{ backgroundImage: `url(${item.image})` }}
+            >
+              <div className="content">
+                <div className="name">{item.name}</div>
+                <div className="des">{item.description}</div>
+                <button>See more</button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="buttons">
+          <button id="prev" onClick={this.handlePrev}>
+            <i className="fa-solid fa-angle-left"></i>
+          </button>
+          <button id="next" onClick={this.handleNext}>
+            <i className="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
       </div>
-      <div className="buttons">
-        <button id="prev" onClick={handlePrevClick}>
-          <i className="fa-solid fa-angle-left"></i>
-        </button>
-        <button id="next" onClick={handleNextClick}>
-          <i className="fa-solid fa-angle-right"></i>
-        </button>
-      </div>
-    </div>
-  );
+    );
+  }
 }
 
-export default SlideShow;
+export default SlideChow;
