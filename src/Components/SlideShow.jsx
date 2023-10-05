@@ -1,11 +1,11 @@
 import React from 'react';
 import './SlideChow.css';
-import iphoneOne from '/src/assets/iphoneOne.jpg';
-import IphoneTwo from '/src/assets/IphoneTwo.jpg';
-import IphoneThree from '/src/assets/IphoneThree.jpg';
-import IphoneFour from '/src/assets/IphoneFour.jpg';
-import IphoneFive from '/src/assets/IphoneFive.jpg';
-import iphonSix from '/src/assets/iphonSix.jpg';
+import iphoneOne from '../assets/iphoneOne.jpg';
+import IphoneTwo from '../assets/IphoneTwo.jpg';
+import IphoneThree from '../assets/IphoneThree.jpg';
+import IphoneFour from '../assets/IphoneFour.jpg';
+import IphoneFive from '../assets/IphoneFive.jpg';
+import iphonSix from '../assets/iphonSix.jpg';
 
 class SlideChow extends React.Component {
   constructor(props) {
