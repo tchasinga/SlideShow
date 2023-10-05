@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SlideChow.css'; // Import your CSS file
+import './SlideChow.css';
 
 function SlideShow() {
   const [currentIndex, setCurrentIndex] = useState(0);
