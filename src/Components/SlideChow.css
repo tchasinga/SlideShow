@@ -54,7 +54,7 @@ body{
     width:300px;
     text-align: left;
     padding:0;
-    color:#eee;
+    color:#9a9a9a;
     transform: translate(0,-50%);
     display: none;
     font-family: system-ui;
@@ -74,6 +74,12 @@ body{
     opacity: 0;
     animation:showcontent 1s ease-in-out 0.3s 1 forwards
   }
+
+  .item .content:nth-child(4){
+    color: #000;
+    background-color: #000;
+  }
+
   .item button{
     padding:10px 20px;
     border:none;

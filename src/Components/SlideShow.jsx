@@ -15,14 +15,14 @@ class SlideChow extends React.Component {
         {
           id: 1,
           image: iphoneOne,
-          name: 'LUNDEV',
-          description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
+          name: 'Iphone 12 Pro Max',
+          description: 'iPhone Pro Max 128GB 5G (VN/A) - Hàng Chính Hãng',
         },
         {
           id: 2,
           image: IphoneTwo,
-          name: 'LUNDEV',
-          description: 'Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu',
+          name: 'Iphone 13 mini',
+          description: 'iPhone 13 mini 128GB 5G (VN/A) - Hàng Chính Hãng',
         },
         {
           id: 3,
